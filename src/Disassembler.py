@@ -146,6 +146,8 @@ class Disassembler(object):
         with open(outputFile, "w+") as disasmWrite:
             for instruction in self._disasmData:
                 disasmWrite.write(f"{instruction}{delimiter}")
+        # Reset the list of disassembled data
+        self._disasmData = []
 
 
 
